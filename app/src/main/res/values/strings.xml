@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Tubbr Code Test</string>
+    <string name="log_in">LOG IN!</string>
+    <string name="you_need_to_login_to_use_spotify_services">You need to login to use Spotify services.</string>
+    <string name="welcome">Welcome</string>
+    <string name="log_out">LOG OUT!</string>
+    <string name="search_tracks">Search Tracks</string>
+    <string name="search_tracks_from_all_of_spotify">Search tracks from all of spotify!</string>
+    <string name="search_20_s_song">Search 20\'s Song</string>
+    <string name="search_songs_from_this_century">Search songs from this century!</string>
+    <string name="search_20s_tracks">Search 20s Tracks</string>
+    <string name="search_any_song">Search any song</string>
+    <string name="search_any_20s_song">Search any 20s song</string>
+    <string name="image">Image Icon</string>
+</resources>

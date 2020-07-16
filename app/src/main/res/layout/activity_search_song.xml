@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".ui.SearchSongActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/search_activity_app_bar"
+        app:elevation="0dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_height="?attr/actionBarSize">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <LinearLayout android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:layout_gravity="center_vertical"
+                    app:srcCompat="@drawable/ic_back"
+                    android:tint="@android:color/white"
+                    android:layout_marginEnd="5dp"
+                    android:id="@+id/search_song_back"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center_vertical"
+                    android:imeOptions="actionSearch"
+                    android:id="@+id/search_song_edit_text"
+                    android:maxLines="1"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:inputType="text"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#B7FFFFFF"
+                    android:background="@color/colorPrimaryDark"
+                    android:hint="@string/search_any_song"
+                    android:layout_height="match_parent"/>
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:srcCompat="@drawable/ic_search"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/search_song_search_button"
+                    android:layout_marginEnd="10dp"
+                    android:tint="@color/colorAccent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/ic_search"
+        android:id="@+id/search_song_dummy"
+        android:tint="#B7FF8400"
+        android:layout_height="200dp"/>
+
+    <ProgressBar
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:id="@+id/search_song_progress"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/search_song_recycler"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:visibility="gone"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:layout_height="match_parent"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
